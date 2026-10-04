@@ -1,0 +1,66 @@
+<section class="page-view py-8 bg-slate-100 min-h-screen" data-page="admin-dashboard">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-8 space-y-6">
+
+    <div class="bg-brand-darkBlue text-white p-6 rounded-3xl shadow-xl flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-brand-gold text-brand-darkBlue flex items-center justify-center text-xl font-black">
+          <i class="fa-solid fa-user-shield"></i>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold text-white font-display"><span dir="ltr" style="unicode-bidi: isolate;">Future Gate</span> CMS Dashboard</h1>
+          <p class="text-xs text-blue-200">Signed in as <span class="text-brand-gold font-bold" id="admin-user-name"></span> &middot; <span id="admin-user-role" class="text-brand-gold font-bold"></span></p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button id="export-applications-btn" data-permission="applications.export"
+                class="bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-file-excel"></i> Export Applications (CSV)
+        </button>
+        <a href="#/home" class="bg-blue-900 hover:bg-blue-800 text-white px-3.5 py-2 rounded-xl text-xs font-bold transition">
+          <i class="fa-solid fa-globe"></i> View Website
+        </a>
+      </div>
+    </div>
+
+    <nav id="admin-nav" class="bg-white p-2 rounded-2xl border border-slate-200 flex flex-wrap gap-2 text-xs font-bold"></nav>
+
+    <!-- KPI cards, populated from /dashboard/statistics -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+        <span class="text-xs text-slate-500 font-bold uppercase">Total Users</span>
+        <div class="text-2xl font-black text-brand-darkBlue mt-1" id="stat-users">—</div>
+        <p class="text-[11px] font-semibold mt-1 text-amber-600"><span id="stat-users-pending">0</span> awaiting approval</p>
+      </div>
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+        <span class="text-xs text-slate-500 font-bold uppercase">Contact Messages</span>
+        <div class="text-2xl font-black text-brand-darkBlue mt-1" id="stat-messages">—</div>
+        <p class="text-[11px] font-semibold mt-1 text-rose-600"><span id="stat-messages-new">0</span> unread</p>
+      </div>
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+        <span class="text-xs text-slate-500 font-bold uppercase">Online Applications</span>
+        <div class="text-2xl font-black text-brand-darkBlue mt-1" id="stat-applications">—</div>
+        <p class="text-[11px] font-semibold mt-1 text-blue-600"><span id="stat-applications-pending">0</span> pending review</p>
+      </div>
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+        <span class="text-xs text-slate-500 font-bold uppercase">Active Lessons (LMS)</span>
+        <div class="text-2xl font-black text-brand-darkBlue mt-1" id="stat-lessons">—</div>
+        <p class="text-[11px] text-purple-600 font-semibold mt-1">Videos &amp; PDF resources</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+      <div class="lg:col-span-2 bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+        <h2 class="font-bold text-slate-900 text-base border-b border-slate-100 pb-3">Content Library</h2>
+        <div id="content-stats" class="grid grid-cols-2 sm:grid-cols-3 gap-3"></div>
+      </div>
+
+      <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3">
+        <h2 class="font-bold text-slate-900 text-base border-b border-slate-100 pb-3">Recent Activity</h2>
+        <div id="recent-activity" class="space-y-2 text-xs max-h-80 overflow-y-auto"></div>
+      </div>
+
+    </div>
+  </div>
+</section>

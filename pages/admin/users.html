@@ -1,0 +1,41 @@
+<section class="page-view py-8 bg-slate-100 min-h-screen" data-page="admin-users">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-8 space-y-6">
+
+    <div class="bg-brand-darkBlue text-white p-6 rounded-3xl shadow-xl flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-brand-gold text-brand-darkBlue flex items-center justify-center text-xl">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold text-white font-display">User Management</h1>
+          <p class="text-xs text-blue-200">Review registrations, activate accounts and assign roles.</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3"><button id="add-user-btn" data-permission="users.create"
+                class="bg-brand-gold hover:bg-amber-500 text-brand-darkBlue px-3.5 py-2 rounded-xl text-xs font-bold transition">
+          <i class="fa-solid fa-user-plus"></i> Add User
+        </button>
+        <button id="export-users-btn" data-permission="users.export"
+                class="bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold transition">
+          <i class="fa-solid fa-file-excel"></i> Export CSV
+        </button></div>
+    </div>
+
+    <nav id="admin-nav" class="bg-white p-2 rounded-2xl border border-slate-200 flex flex-wrap gap-2 text-xs font-bold"></nav>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm"><span class="text-[11px] text-slate-500 font-bold uppercase">Total Users</span><div class="text-xl font-black text-brand-darkBlue mt-1" id="user-stat-total">—</div></div>
+      <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm"><span class="text-[11px] text-slate-500 font-bold uppercase">Active</span><div class="text-xl font-black text-emerald-600 mt-1" id="user-stat-active">—</div></div>
+      <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm"><span class="text-[11px] text-slate-500 font-bold uppercase">Awaiting Approval</span><div class="text-xl font-black text-amber-600 mt-1" id="user-stat-pending">—</div></div>
+      <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm"><span class="text-[11px] text-slate-500 font-bold uppercase">Disabled</span><div class="text-xl font-black text-rose-600 mt-1" id="user-stat-disabled">—</div></div>
+    </div>
+
+    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-3">
+        <h2 class="font-bold text-slate-900 text-base">All Accounts</h2>
+        <span class="text-xs text-slate-500">New registrations are disabled until activated</span>
+      </div>
+      <div id="users-table"></div>
+    </div>
+  </div>
+</section>

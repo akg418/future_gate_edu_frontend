@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Gate National Schools | Empowering Future Leaders Through Excellence In Education</title>
+  <meta name="description" content="Future Gate National Schools - Premier International School in Giza, Egypt providing world-class bilingual education from Kindergarten to Secondary.">
+  <meta name="keywords" content="Future Gate National Schools, International School, Giza Education, Kindergarten, Primary, Preparatory, Secondary, German Program, STEM">
+  <meta name="author" content="Future Gate National Schools">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://futuregate.edu.eg">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Future Gate National Schools">
+  <meta property="og:description" content="Empowering Future Leaders Through Excellence In Education. Accredited bilingual national and international schooling.">
+  <meta property="og:image" content="assets/img/logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Future Gate National Schools">
+  <meta name="twitter:description" content="Empowering Future Leaders Through Excellence In Education.">
+  <meta name="twitter:image" content="assets/img/logo.png">
+
+  <!-- Structured Data / JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Future Gate National Schools",
+    "alternateName": "Future Gate National Schools",
+    "url": "https://futuregate.edu.eg",
+    "logo": "assets/img/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+20-1206192111",
+      "contactType": "admissions",
+      "areaServed": "EG",
+      "availableLanguage": ["English", "Arabic"]
+    },
+    "sameAs": [
+      "https://www.facebook.com/Future.Gate.IS"
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CDN, then the school's brand theme tokens it picks up -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/css/tailwind.config.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Application styles -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+
+<body class="bg-brand-bgLight text-slate-800 antialiased selection:bg-brand-gold selection:text-brand-darkBlue min-h-screen flex flex-col fg-booting">
+
+  <!--
+    Application shell.
+
+    Each slot is filled at boot from pages/partials/*.html, and #app-view is the
+    router outlet where the current page is rendered. See js/app.js.
+  -->
+
+  <div id="topbar-slot"></div>
+  <div id="header-slot"></div>
+
+  <main id="app-view" class="flex-grow"></main>
+
+  <div id="footer-slot"></div>
+  <div id="widgets-slot"></div>
+  <div id="modals-slot"></div>
+
+  <noscript>
+    <div class="p-6 text-center text-sm text-rose-700 bg-rose-50 border-t border-rose-200">
+      This application requires JavaScript. Please enable it in your browser to continue.
+    </div>
+  </noscript>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

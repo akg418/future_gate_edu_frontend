@@ -1,0 +1,570 @@
+<section class="page-view" data-page="home">
+  
+  <!-- HERO SECTION -->
+  <section class="relative bg-gradient-to-br from-slate-50 via-blue-50/40 to-slate-100 overflow-hidden py-10 lg:py-14 border-b border-slate-200">
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Left Hero Content (50%) -->
+        <div class="lg:col-span-6 space-y-5 text-center lg:text-left rtl:lg:text-right">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-100/80 border border-blue-200 text-brand-blue text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-award text-brand-gold"></i>
+            <span dir="ltr" style="unicode-bidi: isolate;">Future Gate National Schools</span>
+          </div>
+
+          <h1 class="font-brand-serif text-4xl sm:text-5xl lg:text-[56px] font-bold text-brand-blue leading-[1.02] tracking-tight">
+            <span id="cms-hero-headline" class="block font-brand-serif font-bold" dir="ltr" style="unicode-bidi: isolate;">Future Gate</span>
+            <span class="block font-brand-serif font-bold text-brand-blue" dir="ltr" style="unicode-bidi: isolate;">National Schools</span>
+          </h1>
+          <p class="font-sans font-semibold text-base sm:text-xl text-slate-800 leading-snug mt-2" data-i18n="heroSubTitle">
+            Empowering Future Leaders Through Excellence In Education
+          </p>
+
+          <p id="cms-hero-desc" class="text-sm sm:text-base text-slate-600 font-normal leading-relaxed max-w-lg mx-auto lg:mx-0" data-i18n="heroDesc">
+            Providing world-class bilingual education from Kindergarten to Secondary. Nurturing innovative minds with German & English mastery, STEM labs, and global leadership values.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-1">
+            <button onclick="showView('admissions')" class="bg-brand-blue hover:bg-brand-darkBlue text-white font-bold px-7 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 text-sm sm:text-base group">
+              <span data-i18n="heroBtnEnroll">Enroll Now</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition text-xs"></i>
+            </button>
+            <button onclick="openVirtualTourModal()" class="gold-button text-brand-darkBlue font-bold px-6 py-3 rounded-xl shadow-md flex items-center gap-2.5 text-sm sm:text-base">
+              <span class="w-6 h-6 rounded-full bg-brand-darkBlue/10 flex items-center justify-center text-xs">
+                <i class="fa-solid fa-play text-brand-darkBlue text-[10px]"></i>
+              </span>
+              <span data-i18n="heroBtnTour">Take A Virtual Tour</span>
+            </button>
+          </div>
+
+          <!-- Contact Quick Bar -->
+          <div class="pt-4 border-t border-slate-200/80 flex flex-wrap justify-center lg:justify-start gap-5 text-xs sm:text-sm text-slate-700">
+            <a href="tel:01206192111" class="flex items-center gap-2.5 bg-white px-3.5 py-2 rounded-xl shadow-sm border border-slate-200 hover:border-brand-gold transition">
+              <div class="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center text-base">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div class="text-left rtl:text-right">
+                <span class="block text-[10px] text-slate-500 font-medium" data-i18n="heroCallUs">Call Us</span>
+                <span class="font-bold font-mono text-brand-darkBlue">01206192111</span>
+              </div>
+            </a>
+
+            <a href="https://wa.me/201206192111" target="_blank" class="flex items-center gap-2.5 bg-white px-3.5 py-2 rounded-xl shadow-sm border border-slate-200 hover:border-emerald-500 transition">
+              <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div class="text-left rtl:text-right">
+                <span class="block text-[10px] text-slate-500 font-medium" data-i18n="heroWhatsApp">WhatsApp</span>
+                <span class="font-bold font-mono text-brand-darkBlue">01206192111</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Image Showcase (50%) -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative mx-auto max-w-lg lg:max-w-none">
+            
+            <!-- Main Student Featured Card Image -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white group">
+              <img src="assets/img/hero-students.jpg" alt="Future Gate Students" class="w-full h-[360px] sm:h-[420px] object-cover object-center group-hover:scale-105 transition duration-700" onError="this.src='assets/img/students-classroom.jpg'" />
+              
+              <!-- Gradient overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-darkBlue/60 via-transparent to-transparent"></div>
+
+              <!-- Floating Badge 1 -->
+              <div class="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-filter backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-brand-gold/20 text-brand-gold flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-graduation-cap text-brand-gold"></i>
+                  </div>
+                  <div>
+                    <p class="font-bold text-slate-900 text-xs sm:text-sm" dir="ltr" style="unicode-bidi: isolate;">Future Gate Excellence</p>
+                    <p class="text-[10px] text-slate-500" data-i18n="heroCardSub">Accredited International Standard</p>
+                  </div>
+                </div>
+                <span class="bg-emerald-100 text-emerald-800 text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span> Admissions Open
+                </span>
+              </div>
+            </div>
+
+            <!-- Floating Decor Badge Top Right -->
+            <div class="absolute -top-3 -right-3 bg-brand-blue text-white p-3.5 rounded-2xl shadow-xl hidden sm:flex items-center gap-2.5 border-2 border-white">
+              <div class="text-2xl font-black font-display text-brand-gold">15+</div>
+              <div class="text-[11px] font-semibold leading-tight">Years Of<br>Excellence</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 PREMIUM FEATURES SECTION -->
+  <section class="py-12 bg-white border-b border-slate-100">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:border-brand-gold hover:shadow-lg transition duration-300 group text-center flex flex-col items-center">
+          <div class="w-14 h-14 rounded-2xl bg-blue-100 text-brand-blue flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-darkBlue transition duration-300">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-2" data-i18n="f1Title">International Education</h3>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="f1Desc">Modern curricula aligned with international standards.</p>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:border-brand-gold hover:shadow-lg transition duration-300 group text-center flex flex-col items-center">
+          <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-darkBlue transition duration-300">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-2" data-i18n="f2Title">Advanced Facilities</h3>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="f2Desc">Smart classrooms, robotics labs, and educational resources.</p>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:border-brand-gold hover:shadow-lg transition duration-300 group text-center flex flex-col items-center">
+          <div class="w-14 h-14 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-darkBlue transition duration-300">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-2" data-i18n="f3Title">Student Care</h3>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="f3Desc">Safe environment supporting every child's growth and wellbeing.</p>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:border-brand-gold hover:shadow-lg transition duration-300 group text-center flex flex-col items-center">
+          <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-darkBlue transition duration-300">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-2" data-i18n="f4Title">Holistic Development</h3>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="f4Desc">Academic excellence with sports, arts and leadership programs.</p>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:border-brand-gold hover:shadow-lg transition duration-300 group text-center flex flex-col items-center">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-darkBlue transition duration-300">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-2" data-i18n="f5Title">Safe & Secure</h3>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="f5Desc">Highest safety standards, 24/7 campus security and supervision.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE FUTURE GATE -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-2xl sm:text-3xl font-black text-brand-darkBlue font-display" data-i18n="whyTitle">
+          Why Choose Future Gate National Schools?
+        </h2>
+        <div class="w-16 h-1 bg-brand-gold mx-auto my-3 rounded-full"></div>
+        <p class="text-slate-600 text-sm sm:text-base" data-i18n="whySub">
+          Discover what sets our educational experience apart and prepares your child for global leadership.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div class="bg-white p-6 rounded-2xl shadow-card hover:shadow-cardHover border border-slate-100 transition duration-300 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-blue-50 text-brand-blue flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-users-rectangle"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-2" data-i18n="w1Title">Small Class Sizes</h4>
+          <p class="text-xs text-slate-500 leading-relaxed" data-i18n="w1Desc">Personalized attention for better learning and individual mentorship.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-card hover:shadow-cardHover border border-slate-100 transition duration-300 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-blue-50 text-brand-blue flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-language"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-2" data-i18n="w2Title">English - German Program</h4>
+          <p class="text-xs text-slate-500 leading-relaxed" data-i18n="w2Desc">Building strong dual language communication skills for global opportunities.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-card hover:shadow-cardHover border border-slate-100 transition duration-300 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-blue-50 text-brand-blue flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-icons"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-2" data-i18n="w3Title">Sports & Innovation</h4>
+          <p class="text-xs text-slate-500 leading-relaxed" data-i18n="w3Desc">Encouraging creativity, athletics, teamwork, and artistic expression.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-card hover:shadow-cardHover border border-slate-100 transition duration-300 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-blue-50 text-brand-blue flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-chalkboard-user"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-2" data-i18n="w4Title">Qualified Teachers</h4>
+          <p class="text-xs text-slate-500 leading-relaxed" data-i18n="w4Desc">Highly qualified and certified educators dedicated to student success.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-card hover:shadow-cardHover border border-slate-100 transition duration-300 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-blue-50 text-brand-blue flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-2" data-i18n="w5Title">Technology Integration</h4>
+          <p class="text-xs text-slate-500 leading-relaxed" data-i18n="w5Desc">Smart interactive boards, LMS platform, and coding curricula.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GET TO KNOW OUR SCHOOL -->
+  <section class="py-16 bg-white">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <h2 class="text-2xl sm:text-3xl font-black text-brand-darkBlue font-display" data-i18n="aboutOverviewTitle">
+            Get To Know Our School
+          </h2>
+          <div class="w-16 h-1 bg-brand-gold rounded-full"></div>
+          
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed" data-i18n="aboutOverviewDesc">
+            Future Gate National Schools is committed to providing an exceptional learning environment that inspires students to achieve their highest potential. Our mission is to nurture confident, responsible, and innovative leaders of tomorrow.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-200/60">
+              <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm shrink-0 mt-0.5">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm" data-i18n="aboutMissionTitle">Our Mission</h4>
+                <p class="text-xs text-slate-600" data-i18n="aboutMissionDesc">To empower students with knowledge, moral values and skills to excel in a global society.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-200/60">
+              <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm shrink-0 mt-0.5">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm" data-i18n="aboutVisionTitle">Our Vision</h4>
+                <p class="text-xs text-slate-600" data-i18n="aboutVisionDesc">To be a leading international school recognized for academic innovation and character development.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-200/60">
+              <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm shrink-0 mt-0.5">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm" data-i18n="aboutValuesTitle">Our Core Values</h4>
+                <p class="text-xs text-slate-600" data-i18n="aboutValuesDesc">Excellence – Integrity – Respect – Innovation – Compassion</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button onclick="showView('about')" class="bg-brand-blue hover:bg-brand-darkBlue text-white font-bold px-6 py-2.5 rounded-xl shadow text-sm transition">
+              <span data-i18n="btnReadMoreAbout">Read More About Us</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 group">
+            <img src="assets/img/school-campus.jpg" alt="Future Gate Campus" class="w-full h-80 sm:h-96 object-cover opacity-90 group-hover:scale-105 transition duration-700" onError="this.src='assets/img/campus-main.jpg'" />
+            
+            <button onclick="openVirtualTourModal()" aria-label="Play Virtual Tour Video" class="absolute inset-0 m-auto w-20 h-20 rounded-full bg-brand-gold/90 text-brand-darkBlue flex items-center justify-center text-2xl shadow-glow pulse-ring hover:scale-110 transition duration-300">
+              <i class="fa-solid fa-play ml-1"></i>
+            </button>
+
+            <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-lg flex items-center gap-2">
+              <i class="fa-solid fa-circle-play text-brand-gold"></i>
+              <span data-i18n="campusVideoLabel">Watch Virtual Campus Tour Video</span>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-brand-darkBlue text-white rounded-2xl p-6 shadow-xl grid grid-cols-2 md:grid-cols-4 gap-4 text-center divide-y md:divide-y-0 md:divide-x rtl:md:divide-x-reverse divide-blue-800/60">
+            <div class="p-2">
+              <div class="text-2xl sm:text-3xl font-black text-brand-gold font-display">15+</div>
+              <div class="text-xs text-blue-200 font-medium mt-1" data-i18n="statExcellence">Years Of Excellence</div>
+            </div>
+            <div class="p-2">
+              <div class="text-2xl sm:text-3xl font-black text-brand-gold font-display">2500+</div>
+              <div class="text-xs text-blue-200 font-medium mt-1" data-i18n="statStudents">Happy Students</div>
+            </div>
+            <div class="p-2">
+              <div class="text-2xl sm:text-3xl font-black text-brand-gold font-display">150+</div>
+              <div class="text-xs text-blue-200 font-medium mt-1" data-i18n="statTeachers">Expert Teachers</div>
+            </div>
+            <div class="p-2">
+              <div class="text-2xl sm:text-3xl font-black text-brand-gold font-display">20+</div>
+              <div class="text-xs text-blue-200 font-medium mt-1" data-i18n="statAwards">Awards Won</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK SERVICES NAVIGATION CARDS SECTION -->
+  <section class="py-14 bg-slate-50 border-t border-slate-200/60">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        
+        <div onclick="showView('programs')" class="cursor-pointer bg-white p-6 rounded-2xl shadow-card hover:shadow-cardHover border border-slate-200 hover:border-brand-gold transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center text-2xl mb-4 group-hover:bg-brand-gold group-hover:text-brand-darkBlue transition">
+              <i class="fa-solid fa-book-open-reader"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base mb-1" data-i18n="cardProgramsTitle">Academic Programs</h3>
+            <p class="text-xs text-slate-500 mb-4" data-i18n="cardProgramsDesc">From Kindergarten to Secondary, designed for every stage.</p>
+          </div>
+          <span class="text-xs font-bold text-brand-blue group-hover:text-brand-gold flex items-center gap-1">
+            <span data-i18n="cardProgramsLink">View Programs</span> <i class="fa-solid fa-arrow-right rtl:rotate-180"></i>
+          </span>
+        </div>
+
+        <div onclick="showView('lessons')" class="cursor-pointer bg-white p-6 rounded-2xl shadow-card hover:shadow-cardHover border border-slate-200 hover:border-brand-gold transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mb-4 group-hover:bg-brand-gold group-hover:text-brand-darkBlue transition">
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base mb-1" data-i18n="cardLessonsTitle">Lessons Platform</h3>
+            <p class="text-xs text-slate-500 mb-4" data-i18n="cardLessonsDesc">Online & Offline lessons, videos, assignments & more.</p>
+          </div>
+          <span class="text-xs font-bold text-brand-blue group-hover:text-brand-gold flex items-center gap-1">
+            <span data-i18n="cardLessonsLink">Go to Lessons</span> <i class="fa-solid fa-arrow-right rtl:rotate-180"></i>
+          </span>
+        </div>
+
+        <div onclick="showView('admissions')" class="cursor-pointer bg-white p-6 rounded-2xl shadow-card hover:shadow-cardHover border border-slate-200 hover:border-brand-gold transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl mb-4 group-hover:bg-brand-gold group-hover:text-brand-darkBlue transition">
+              <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base mb-1" data-i18n="cardAdmissionsTitle">Admissions</h3>
+            <p class="text-xs text-slate-500 mb-4" data-i18n="cardAdmissionsDesc">Easy online application and admission status tracking.</p>
+          </div>
+          <span class="text-xs font-bold text-brand-blue group-hover:text-brand-gold flex items-center gap-1">
+            <span data-i18n="cardAdmissionsLink">Apply Now</span> <i class="fa-solid fa-arrow-right rtl:rotate-180"></i>
+          </span>
+        </div>
+
+        <div onclick="showView('events')" class="cursor-pointer bg-white p-6 rounded-2xl shadow-card hover:shadow-cardHover border border-slate-200 hover:border-brand-gold transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-2xl mb-4 group-hover:bg-brand-gold group-hover:text-brand-darkBlue transition">
+              <i class="fa-solid fa-calendar-star"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base mb-1" data-i18n="cardEventsTitle">Events</h3>
+            <p class="text-xs text-slate-500 mb-4" data-i18n="cardEventsDesc">Stay updated with our events, activities and celebrations.</p>
+          </div>
+          <span class="text-xs font-bold text-brand-blue group-hover:text-brand-gold flex items-center gap-1">
+            <span data-i18n="cardEventsLink">View Events</span> <i class="fa-solid fa-arrow-right rtl:rotate-180"></i>
+          </span>
+        </div>
+
+        <div onclick="showView('calendar')" class="cursor-pointer bg-white p-6 rounded-2xl shadow-card hover:shadow-cardHover border border-slate-200 hover:border-brand-gold transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center text-2xl mb-4 group-hover:bg-brand-gold group-hover:text-brand-darkBlue transition">
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base mb-1" data-i18n="cardCalendarTitle">School Calendar</h3>
+            <p class="text-xs text-slate-500 mb-4" data-i18n="cardCalendarDesc">Explore academic calendar, holidays, exams and important dates.</p>
+          </div>
+          <span class="text-xs font-bold text-brand-blue group-hover:text-brand-gold flex items-center gap-1">
+            <span data-i18n="cardCalendarLink">View Calendar</span> <i class="fa-solid fa-arrow-right rtl:rotate-180"></i>
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-COLUMN NEWS, UPCOMING EVENTS & GALLERY SECTION -->
+  <section class="py-16 bg-white">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <div class="space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <h3 class="font-bold text-slate-900 text-lg flex items-center gap-2" data-i18n="secNewsTitle">
+              <i class="fa-solid fa-newspaper text-brand-blue"></i> Latest News
+            </h3>
+            <button onclick="showView('news')" class="text-xs text-brand-blue font-semibold hover:text-brand-gold" data-i18n="viewAll">View All &rarr;</button>
+          </div>
+
+          <div id="home-news-container" class="space-y-4"></div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <h3 class="font-bold text-slate-900 text-lg flex items-center gap-2" data-i18n="secEventsTitle">
+              <i class="fa-solid fa-calendar-check text-brand-blue"></i> Upcoming Events
+            </h3>
+            <button onclick="showView('events')" class="text-xs text-brand-blue font-semibold hover:text-brand-gold" data-i18n="viewAll">View All &rarr;</button>
+          </div>
+
+          <div id="home-events-container" class="space-y-3"></div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <h3 class="font-bold text-slate-900 text-lg flex items-center gap-2" data-i18n="secGalleryTitle">
+              <i class="fa-solid fa-images text-brand-blue"></i> School Gallery
+            </h3>
+            <button onclick="showView('gallery')" class="text-xs text-brand-blue font-semibold hover:text-brand-gold" data-i18n="viewAll">View Gallery &rarr;</button>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3" id="home-gallery-grid"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PARENTS TESTIMONIALS -->
+  <section class="py-16 bg-slate-50 border-t border-slate-200/60">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-2xl sm:text-3xl font-black text-brand-darkBlue font-display mb-2" data-i18n="testimonialsTitle">
+        Parents' Testimonials
+      </h2>
+      <div class="w-16 h-1 bg-brand-gold mx-auto mb-10 rounded-full"></div>
+
+      <div class="relative bg-white rounded-3xl p-8 sm:p-10 shadow-card border border-slate-200">
+        <div class="text-brand-gold text-3xl mb-4">
+          <i class="fa-solid fa-quote-left"></i>
+        </div>
+        
+        <p id="testimonial-text" class="text-slate-700 text-base sm:text-lg italic font-normal leading-relaxed mb-6">
+          "Future Gate National Schools has been a wonderful experience for our child. The staff is amazing and the education quality is outstanding!"
+        </p>
+
+        <div class="flex items-center justify-center gap-1 text-amber-400 text-sm mb-3" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <h4 id="testimonial-author" class="font-bold text-slate-900 text-base">Mariam Hassan</h4>
+        <p id="testimonial-role" class="text-xs text-slate-500">Parent of Grade 4 Student</p>
+
+        <div class="flex justify-center items-center gap-2 mt-6">
+          <button aria-label="Testimonial 1" class="t-dot w-3 h-3 rounded-full bg-brand-blue"></button>
+          <button aria-label="Testimonial 2" class="t-dot w-3 h-3 rounded-full bg-slate-300"></button>
+          <button aria-label="Testimonial 3" class="t-dot w-3 h-3 rounded-full bg-slate-300"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION CTA SECTION -->
+  <section class="py-16 bg-white">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8">
+      <div class="blue-gradient-bg rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+          
+          <div class="lg:col-span-7">
+            <h2 class="text-2xl sm:text-3xl font-black font-display text-white mb-2" data-i18n="ctaFormTitle">
+              Start Your Child's Journey Today
+            </h2>
+            <p class="text-blue-100 text-sm mb-6" data-i18n="ctaFormSub">
+              Fill out the quick enrollment inquiry form and our admissions office will contact you within 24 hours.
+            </p>
+
+            <form id="cta-quick-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs text-blue-200 mb-1 font-medium" data-i18n="lblStudentName">Student Name *</label>
+                  <input type="text" id="cta-student-name" name="studentName" required placeholder="Full Student Name" class="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200/60 focus:outline-none focus:bg-white/20 text-sm">
+                </div>
+                <div>
+                  <label class="block text-xs text-blue-200 mb-1 font-medium" data-i18n="lblParentName">Parent Name *</label>
+                  <input type="text" id="cta-parent-name" name="parentName" required placeholder="Parent Full Name" class="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200/60 focus:outline-none focus:bg-white/20 text-sm">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs text-blue-200 mb-1 font-medium" data-i18n="lblPhone">Phone Number *</label>
+                  <input type="tel" id="cta-phone" name="phone" required pattern="^(01)[0-9]{9}$" title="Enter a valid 11-digit Egyptian phone number starting with 01" placeholder="01206192111" class="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200/60 focus:outline-none focus:bg-white/20 text-sm">
+                </div>
+                <div>
+                  <label class="block text-xs text-blue-200 mb-1 font-medium" data-i18n="lblEmail">Email Address *</label>
+                  <input type="email" id="cta-email" name="email" required placeholder="parent@example.com" class="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200/60 focus:outline-none focus:bg-white/20 text-sm">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs text-blue-200 mb-1 font-medium" data-i18n="lblGradeLevel">Grade Level *</label>
+                <select id="cta-grade" name="grade" required class="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:bg-white/20 text-sm">
+                  <option value="" class="text-slate-800">Select Grade Level</option>
+                  <option value="Kindergarten" class="text-slate-800">Kindergarten (KG1 - KG2)</option>
+                  <option value="Primary" class="text-slate-800">Primary (Grades 1 - 6)</option>
+                  <option value="Preparatory" class="text-slate-800">Preparatory (Grades 7 - 9)</option>
+                  <option value="Secondary" class="text-slate-800">Secondary (Grades 10 - 12)</option>
+                </select>
+              </div>
+
+              <button type="submit" id="cta-submit-btn" class="w-full gold-button text-brand-darkBlue font-black py-3.5 rounded-xl shadow-lg text-base tracking-wide uppercase">
+                <span data-i18n="btnSubmitApply">Apply Now</span>
+              </button>
+            </form>
+          </div>
+
+          <div class="lg:col-span-5 space-y-4 border-t lg:border-t-0 lg:border-l rtl:lg:border-l-0 rtl:lg:border-r border-white/10 pt-6 lg:pt-0 lg:pl-8 rtl:lg:pr-8">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center text-lg shrink-0">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm" data-i18n="ctaB1">Easy Admission Process</h4>
+                <p class="text-xs text-blue-200">Online application tracking and smooth registration.</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center text-lg shrink-0">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm" data-i18n="ctaB2">Secure & Safe Environment</h4>
+                <p class="text-xs text-blue-200">Modern security, medical care, and constant supervision.</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center text-lg shrink-0">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm" data-i18n="ctaB3">World-Class Education</h4>
+                <p class="text-xs text-blue-200">Bilingual English & German program with STEM innovation.</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center text-lg shrink-0">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm" data-i18n="ctaB4">Holistic Student Development</h4>
+                <p class="text-xs text-blue-200">Sports academies, arts, leadership, and robotics competitions.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>

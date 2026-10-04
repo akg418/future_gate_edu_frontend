@@ -1,0 +1,54 @@
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/201206192111?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D9%8F%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%8A%D9%85%20%D9%81%D9%8A%20Future%20Gate%20National%20Schools" target="_blank" title="Chat with us on WhatsApp" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 z-50 bg-emerald-500 text-white p-3.5 rounded-full shadow-2xl hover:scale-110 hover:bg-emerald-600 transition duration-300 flex items-center gap-2.5 group">
+  <i class="fa-brands fa-whatsapp text-2xl"></i>
+  <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 text-xs font-bold pr-1">
+    Chat with us on WhatsApp
+  </span>
+</a>
+
+<!-- FLOATING AI ASSISTANT WIDGET -->
+<div class="fixed bottom-24 right-6 rtl:right-auto rtl:left-6 z-50">
+  <button onclick="toggleAiAssistant()" aria-label="Open AI School Assistant" class="bg-brand-blue hover:bg-brand-darkBlue text-white p-3.5 rounded-full shadow-2xl border-2 border-brand-gold flex items-center justify-center transition duration-300 hover:scale-105">
+    <i class="fa-solid fa-robot text-xl text-brand-gold"></i>
+  </button>
+
+  <div id="ai-chat-window" class="hidden absolute bottom-16 right-0 rtl:right-auto rtl:left-0 w-80 sm:w-96 bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col h-[480px]" role="dialog" aria-label="Future Gate AI Assistant">
+    
+    <div class="bg-brand-darkBlue text-white p-4 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-full bg-brand-gold text-brand-darkBlue flex items-center justify-center font-bold text-sm">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-xs text-white" id="ai-header-name">Future Gate AI Assistant</h4>
+          <span class="text-[10px] text-emerald-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Online (Arabic & English)</span>
+        </div>
+      </div>
+      <button onclick="toggleAiAssistant()" aria-label="Close Assistant" class="text-slate-300 hover:text-white text-lg"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Messages Window -->
+    <div id="ai-chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-xs bg-slate-50" role="log" aria-live="polite">
+      <div class="bg-white p-3 rounded-2xl border border-slate-200 text-slate-700 shadow-sm max-w-[88%] leading-relaxed">
+        Hello! 👋 Welcome to <span dir="ltr" style="unicode-bidi: isolate;">Future Gate National Schools</span>. How can I help you today? Ask me about Admissions, Fees, German Program, Lessons, or Events!
+      </div>
+    </div>
+
+    <!-- Suggested Quick Questions Pills -->
+    <div class="p-2 bg-white border-t border-slate-200 flex items-center gap-1.5 overflow-x-auto text-[10px]">
+      <button onclick="sendQuickAiQuery('How can I apply?')" class="shrink-0 bg-blue-50 hover:bg-blue-100 text-brand-blue px-2.5 py-1 rounded-lg font-semibold transition">How to apply?</button>
+      <button onclick="sendQuickAiQuery('What grades do you offer?')" class="shrink-0 bg-blue-50 hover:bg-blue-100 text-brand-blue px-2.5 py-1 rounded-lg font-semibold transition">Grades offered</button>
+      <button onclick="sendQuickAiQuery('German language program')" class="shrink-0 bg-blue-50 hover:bg-blue-100 text-brand-blue px-2.5 py-1 rounded-lg font-semibold transition">German Program</button>
+      <button onclick="sendQuickAiQuery('How can I contact the school?')" class="shrink-0 bg-blue-50 hover:bg-blue-100 text-brand-blue px-2.5 py-1 rounded-lg font-semibold transition">Contact info</button>
+    </div>
+
+    <!-- Input Bar -->
+    <form id="ai-chat-form" class="p-3 bg-white border-t border-slate-200 flex gap-2 items-center">
+      <input type="text" id="ai-chat-input" placeholder="Ask anything about Future Gate..." class="flex-1 px-3 py-2 border rounded-xl text-xs focus:outline-none focus:border-brand-blue">
+      <button type="submit" id="ai-chat-send-btn" aria-label="Send Message" class="bg-brand-blue text-white px-3.5 py-2 rounded-xl text-xs font-bold hover:bg-brand-darkBlue transition">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </form>
+
+  </div>
+</div>

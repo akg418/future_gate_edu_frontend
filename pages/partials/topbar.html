@@ -1,0 +1,45 @@
+<!-- TOP UTILITY BAR -->
+<div class="bg-brand-darkBlue text-white text-xs py-2 px-4 sm:px-8 border-b border-blue-900/50">
+  <div class="max-w-[1440px] mx-auto flex flex-wrap justify-between items-center gap-2">
+    
+    <!-- Language Switcher -->
+    <div class="flex items-center space-x-3 rtl:space-x-reverse font-medium">
+      <button onclick="switchLanguage('ar')" id="lang-ar-btn" aria-label="Switch to Arabic" class="hover:text-brand-gold transition flex items-center gap-1.5 opacity-80 hover:opacity-100 focus-ring rounded px-1">
+        <span></span> العربية
+      </button>
+      <span class="text-blue-700">|</span>
+      <button onclick="switchLanguage('en')" id="lang-en-btn" aria-label="Switch to English" class="hover:text-brand-gold transition flex items-center gap-1.5 text-brand-gold font-semibold focus-ring rounded px-1">
+        <span></span> English
+      </button>
+    </div>
+
+    <!-- Quick Contacts, Search & Admin -->
+    <div class="flex items-center space-x-4 rtl:space-x-reverse">
+      <button onclick="openGlobalSearchModal()" class="hover:text-brand-gold transition text-xs flex items-center gap-1 bg-blue-900/40 hover:bg-blue-800/60 px-2.5 py-0.5 rounded border border-blue-700/50">
+        <i class="fa-solid fa-magnifying-glass text-brand-gold"></i>
+        <span data-i18n="topbarSearch">Search</span>
+        <kbd class="hidden sm:inline text-[9px] bg-blue-950 px-1 rounded text-slate-300 ml-1 font-mono">⌘K</kbd>
+      </button>
+      <span class="text-blue-700">|</span>
+      <a href="tel:01206192111" class="hover:text-brand-gold transition flex items-center gap-1.5">
+        <i class="fa-solid fa-phone text-brand-gold text-xs"></i>
+        <span class="font-mono">01206192111</span>
+      </a>
+      <span class="hidden md:inline text-blue-700">|</span>
+      <a href="https://wa.me/201206192111" target="_blank" class="hover:text-brand-gold transition flex items-center gap-1.5">
+        <i class="fa-brands fa-whatsapp text-emerald-400 text-xs"></i>
+        <span class="font-mono">01206192111</span>
+      </a>
+      <span class="hidden sm:inline text-blue-700">|</span>
+      <div class="flex items-center space-x-2.5 rtl:space-x-reverse text-slate-300">
+        <a href="https://www.facebook.com/Future.Gate.IS" target="_blank" aria-label="Facebook Page" class="hover:text-brand-gold transition"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram Page" class="hover:text-brand-gold transition"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube Channel" class="hover:text-brand-gold transition"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <span class="text-blue-700">|</span>
+
+      <!-- Account area: swapped by js/components/layout.js on sign in / sign out -->
+      <div id="account-area" class="flex items-center gap-2"></div>
+    </div>
+  </div>
+</div>

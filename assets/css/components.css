@@ -1,0 +1,86 @@
+/**
+ * Styles for the components introduced during the refactor (toasts, modals,
+ * data tables, permission gating). Everything here is additive — the original
+ * design language in main.css is untouched.
+ */
+
+/* --------------------------- Permission gating ---------------------------- */
+
+/* Elements hidden because the user lacks the permission. `hidden` alone loses
+   to Tailwind's display utilities, so this rule makes the intent win. */
+.fg-hidden,
+[hidden] {
+  display: none !important;
+}
+
+/* ------------------------------ Boot state -------------------------------- */
+
+body.fg-booting #app-view {
+  min-height: 60vh;
+}
+
+/* -------------------------------- Toasts ---------------------------------- */
+
+.fg-toast-enter {
+  animation: fg-toast-in 0.22s cubic-bezier(0.21, 1.02, 0.73, 1) both;
+}
+.fg-toast-leave {
+  animation: fg-toast-out 0.18s ease-in both;
+}
+
+@keyframes fg-toast-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes fg-toast-out {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(8px); }
+}
+
+/* -------------------------------- Modals ---------------------------------- */
+
+.fg-modal-enter {
+  animation: fg-modal-in 0.18s ease-out both;
+}
+
+@keyframes fg-modal-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.fg-modal-enter > * {
+  animation: fg-modal-panel-in 0.22s cubic-bezier(0.21, 1.02, 0.73, 1) both;
+}
+@keyframes fg-modal-panel-in {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ------------------------------ Data tables -------------------------------- */
+
+/* Keeps long admin tables readable on narrow screens without breaking layout. */
+[data-table-body] td {
+  vertical-align: middle;
+}
+
+/* ------------------------------ Utilities ---------------------------------- */
+
+.line-clamp-1,
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-1 { -webkit-line-clamp: 1; }
+.line-clamp-2 { -webkit-line-clamp: 2; }
+
+/* Respect a reader's reduced-motion preference across every animation. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

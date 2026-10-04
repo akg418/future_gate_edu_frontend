@@ -1,0 +1,136 @@
+<section class="page-view py-12 bg-slate-50" data-page="admissions">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-10">
+    
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="text-brand-gold font-bold text-sm uppercase tracking-wider">Join Future Gate</span>
+      <h1 class="text-3xl font-black text-brand-darkBlue font-display">Online Admissions & Registration</h1>
+      <p class="text-slate-600 text-sm mt-2">Submit your application online or check your application status using your reference ID.</p>
+    </div>
+
+    <!-- Application Status Checker Card -->
+    <div class="bg-white p-6 rounded-3xl shadow-card border border-slate-200 space-y-4">
+      <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+        <i class="fa-solid fa-magnifying-glass-location text-brand-blue"></i> Application Status Tracker
+      </h3>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input type="text" id="track-app-id" placeholder="Enter Application Reference (e.g. FG-2026-8941)" class="flex-1 px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-blue">
+        <button id="track-app-btn" class="bg-brand-blue text-white px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-brand-darkBlue transition">Check Status</button>
+      </div>
+      <div id="status-result-box" class="hidden p-4 rounded-2xl bg-slate-50 border border-slate-200 text-sm"></div>
+    </div>
+
+    <!-- Full Registration Form -->
+    <div class="bg-white p-8 rounded-3xl shadow-card border border-slate-200 space-y-6">
+      <div class="border-b border-slate-100 pb-4">
+        <h3 class="font-bold text-xl text-brand-darkBlue">Student Registration Form</h3>
+        <p class="text-xs text-slate-500">Please provide accurate information for the student and guardian.</p>
+      </div>
+
+      <form id="full-admission-form" class="space-y-6">
+        
+        <div>
+          <h4 class="font-bold text-slate-800 text-sm mb-3 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-brand-blue text-white text-xs flex items-center justify-center font-bold">1</span>
+            Student Details
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Student Full Name *</label>
+              <input type="text" id="adm-student-name" name="studentName" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-blue">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Date of Birth *</label>
+              <input type="date" id="adm-dob" name="dateOfBirth" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-blue">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Gender *</label>
+              <select id="adm-gender" name="gender" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-blue">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Applying Grade Level *</label>
+              <select id="adm-grade" name="grade" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-blue">
+                <option value="Kindergarten KG1">Kindergarten KG1</option>
+                <option value="Kindergarten KG2">Kindergarten KG2</option>
+                <option value="Primary Grade 1">Primary Grade 1</option>
+                <option value="Primary Grade 2">Primary Grade 2</option>
+                <option value="Primary Grade 3">Primary Grade 3</option>
+                <option value="Primary Grade 4">Primary Grade 4</option>
+                <option value="Primary Grade 5">Primary Grade 5</option>
+                <option value="Primary Grade 6">Primary Grade 6</option>
+                <option value="Preparatory Grade 7">Preparatory Grade 7</option>
+                <option value="Preparatory Grade 8">Preparatory Grade 8</option>
+                <option value="Preparatory Grade 9">Preparatory Grade 9</option>
+                <option value="Secondary Grade 10">Secondary Grade 10</option>
+                <option value="Secondary Grade 11">Secondary Grade 11</option>
+                <option value="Secondary Grade 12">Secondary Grade 12</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-slate-800 text-sm mb-3 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-brand-blue text-white text-xs flex items-center justify-center font-bold">2</span>
+            Parent / Guardian Information
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Parent Name *</label>
+              <input type="text" id="adm-parent-name" name="parentName" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-blue">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Mobile Phone *</label>
+              <input type="tel" id="adm-phone" name="phone" required pattern="^(01)[0-9]{9}$" title="Enter 11-digit Egyptian mobile starting with 01" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-blue">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
+              <input type="email" id="adm-email" name="email" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-blue">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">National ID / Passport No *</label>
+              <input type="text" id="adm-national-id" name="nationalId" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-blue">
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-slate-800 text-sm mb-3 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-brand-blue text-white text-xs flex items-center justify-center font-bold">3</span>
+            Upload Required Documents
+          </h4>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="border-2 border-dashed border-slate-300 rounded-2xl p-4 text-center hover:border-brand-blue transition">
+              <i class="fa-solid fa-file-pdf text-rose-500 text-2xl mb-2"></i>
+              <p class="text-xs font-semibold text-slate-700">Birth Certificate</p>
+              <input type="file" id="doc-birth" name="birthCertificate" class="hidden">
+              <label for="doc-birth" id="lbl-birth" class="mt-2 inline-block px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs rounded-lg cursor-pointer">Choose File</label>
+            </div>
+
+            <div class="border-2 border-dashed border-slate-300 rounded-2xl p-4 text-center hover:border-brand-blue transition">
+              <i class="fa-solid fa-id-card text-blue-500 text-2xl mb-2"></i>
+              <p class="text-xs font-semibold text-slate-700">Parent ID Copy</p>
+              <input type="file" id="doc-id" name="nationalIdDoc" class="hidden">
+              <label for="doc-id" id="lbl-id" class="mt-2 inline-block px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs rounded-lg cursor-pointer">Choose File</label>
+            </div>
+
+            <div class="border-2 border-dashed border-slate-300 rounded-2xl p-4 text-center hover:border-brand-blue transition">
+              <i class="fa-solid fa-image text-emerald-500 text-2xl mb-2"></i>
+              <p class="text-xs font-semibold text-slate-700">Student Photo</p>
+              <input type="file" id="doc-photo" name="photo" class="hidden">
+              <label for="doc-photo" id="lbl-photo" class="mt-2 inline-block px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs rounded-lg cursor-pointer">Choose File</label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" id="adm-submit-btn" class="w-full gold-button text-brand-darkBlue font-black py-4 rounded-xl shadow-lg text-base tracking-wide uppercase">
+          Submit Full Application
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>

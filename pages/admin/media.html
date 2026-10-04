@@ -1,0 +1,31 @@
+<section class="page-view py-8 bg-slate-100 min-h-screen" data-page="admin-media">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-8 space-y-6">
+
+    <div class="bg-brand-darkBlue text-white p-6 rounded-3xl shadow-xl flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-brand-gold text-brand-darkBlue flex items-center justify-center text-xl">
+          <i class="fa-solid fa-images"></i>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold text-white font-display">Media Library</h1>
+          <p class="text-xs text-blue-200">Images and documents uploaded to the server.</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3"><button id="upload-media-btn" data-permission="media.upload"
+                class="bg-brand-gold hover:bg-amber-500 text-brand-darkBlue px-3.5 py-2 rounded-xl text-xs font-bold transition">
+          <i class="fa-solid fa-cloud-arrow-up"></i> Upload Files
+        </button>
+        <input id="media-file-input" type="file" multiple hidden /></div>
+    </div>
+
+    <nav id="admin-nav" class="bg-white p-2 rounded-2xl border border-slate-200 flex flex-wrap gap-2 text-xs font-bold"></nav>
+
+    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-3">
+        <h2 class="font-bold text-slate-900 text-base">Uploaded Files</h2>
+        
+      </div>
+      <div id="media-table"></div>
+    </div>
+  </div>
+</section>

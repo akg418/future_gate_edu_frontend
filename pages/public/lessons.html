@@ -1,0 +1,49 @@
+<section class="page-view py-12 bg-slate-50" data-page="lessons">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-8 space-y-8">
+    
+    <div class="flex flex-wrap items-center justify-between gap-4 bg-white p-6 rounded-3xl shadow-card border border-slate-200">
+      <div>
+        <span class="text-brand-gold font-bold text-xs uppercase tracking-wider">Learning Management System</span>
+        <h1 class="text-2xl sm:text-3xl font-black text-brand-darkBlue font-display">Lessons Platform & Online Classroom</h1>
+        <p class="text-slate-500 text-xs sm:text-sm mt-1">Access video streaming lessons, downloadable PDFs, PowerPoint slides, and upload assignments.</p>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button data-lesson-type="all" id="lms-tab-all" class="px-4 py-2 rounded-xl text-xs font-bold bg-brand-blue text-white">All Lessons</button>
+        <button data-lesson-type="online" id="lms-tab-online" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200">Online Streaming</button>
+        <button data-lesson-type="offline" id="lms-tab-offline" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200">Offline Resources</button>
+      </div>
+    </div>
+
+    <!-- Search & Filter Bar -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+      <div class="md:col-span-6 relative">
+        <i class="fa-solid fa-magnifying-glass absolute left-4 rtl:left-auto rtl:right-4 top-3.5 text-slate-400 text-sm"></i>
+        <input type="text" id="lesson-search-input" placeholder="Search lesson title or subject..." class="w-full pl-11 rtl:pl-4 rtl:pr-11 pr-4 py-2.5 rounded-xl border border-slate-300 bg-white text-sm focus:outline-none focus:border-brand-blue">
+      </div>
+      <div class="md:col-span-3">
+        <select id="lesson-grade-filter" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-sm focus:outline-none focus:border-brand-blue">
+          <option value="all">All Grade Levels</option>
+          <option value="Kindergarten">Kindergarten</option>
+          <option value="Primary">Primary</option>
+          <option value="Preparatory">Preparatory</option>
+          <option value="Secondary">Secondary</option>
+        </select>
+      </div>
+      <div class="md:col-span-3">
+        <select id="lesson-subject-filter" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-sm focus:outline-none focus:border-brand-blue">
+          <option value="all">All Subjects</option>
+          <option value="Mathematics">Mathematics</option>
+          <option value="Science">Science</option>
+          <option value="English">English Language</option>
+          <option value="German">German Language</option>
+          <option value="Technology">Technology & Coding</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Lessons Cards Grid -->
+    <div id="lessons-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+
+  </div>
+</section>

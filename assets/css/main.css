@@ -1,0 +1,60 @@
+/**
+ * Base styles — migrated verbatim from the original single-file application so
+ * the design is unchanged. Brand tokens live in assets/css/tailwind.config.js;
+ * reusable component styles live in components.css.
+ */
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Inter', 'Cairo', sans-serif;
+}
+html[dir="rtl"] body {
+  font-family: 'Cairo', sans-serif;
+}
+.font-brand-serif {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+}
+.tagline-tracking {
+  letter-spacing: 0.18em;
+}
+.gold-button {
+  background: linear-gradient(135deg, #E5A823 0%, #D49712 100%);
+  transition: all 0.3s ease;
+}
+.gold-button:hover {
+  background: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(229, 168, 35, 0.4);
+}
+.glass-nav {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+}
+.pulse-ring {
+  animation: pulse-animation 2s infinite;
+}
+@keyframes pulse-animation {
+  0% { box-shadow: 0 0 0 0 rgba(229, 168, 35, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(229, 168, 35, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(229, 168, 35, 0); }
+}
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.focus-ring:focus-visible {
+  outline-color: #E5A823;
+}
+.typing-dot {
+  animation: typing 1.4s infinite ease-in-out both;
+}
+.typing-dot:nth-child(1) { animation-delay: 0s; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes typing {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
+  40% { transform: scale(1); opacity: 1; }
+}
