@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "https://future-gate-edu-backend.vercel.app/api/:path*" }
+  ]
+}
